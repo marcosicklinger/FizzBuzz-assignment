@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'application'
 }
 
 group 'dssc.assignment'
@@ -11,9 +11,14 @@ repositories {
 
 dependencies {
     testImplementation(platform('org.junit:junit-bom:5.6.2'))
-    testImplementation('org.junit.jupiter:junit-jupiter')
+    testImplementation('org.junit.jupiter:junit-jupiter:5.8.1')
 }
 
 test {
     useJUnitPlatform()
 }
+
+application {
+    mainClassName = 'dssc.assignment.fizzbuzz.FizzBuzz'
+}
+
