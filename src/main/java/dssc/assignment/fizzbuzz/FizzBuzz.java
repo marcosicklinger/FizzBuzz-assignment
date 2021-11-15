@@ -8,17 +8,17 @@ public class FizzBuzz {
             if (i % 7 == 0) {
                 if (i % 3 == 0) {
                     if (i % 5 == 0) {
-                        System.out.println("FizzBuzzBang " + i);
+                        System.out.println("FizzBuzzBang");
                     }
                     else {
-                        System.out.println("FizzBang " + i);
+                        System.out.println("FizzBang");
                     }
                 }
                 else if (i % 5 == 0){
-                    System.out.println("BuzzBang " + i);
+                    System.out.println("BuzzBang");
                 }
                 else {
-                    System.out.println("Bang " + i);
+                    System.out.println("Bang");
                 }
             }
             else {
