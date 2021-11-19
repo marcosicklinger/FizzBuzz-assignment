@@ -1,16 +1,12 @@
 package dssc.assignment.fizzbuzz;
 
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public class FizzBuzz {
 
-    public static void main(String... args) {
-
-        for (int i = 1; i < 106; i++) {
-            System.out.println(converter(i));
-        }
-        
-    }
-
-    public static String converter (int i) {
+    public String converter(int i) {
         if (i % 7 == 0) {
             if (i % 3 == 0) {
                 if (i % 5 == 0) {
@@ -30,6 +26,11 @@ public class FizzBuzz {
         else {
             return Integer.toString(i);
         }
+    }
+
+    public void print () {
+        Stream<String> fizzBuzzes = IntStream.range(1, 106).mapToObj(this::converter);
+        fizzBuzzes.collect(Collectors.joining(", "));
     }
 
 }
