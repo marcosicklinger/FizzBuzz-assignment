@@ -28,7 +28,7 @@ public class FizzBuzz {
             }
         }
         else {
-            return "" + i;
+            return Integer.toString(i);
         }
     }
 
