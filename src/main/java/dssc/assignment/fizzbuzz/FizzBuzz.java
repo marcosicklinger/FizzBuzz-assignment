@@ -30,7 +30,7 @@ public class FizzBuzz {
 
     public void print () {
         Stream<String> fizzBuzzes = IntStream.range(1, 106).mapToObj(this::converter);
-        fizzBuzzes.collect(Collectors.joining(", "));
+        System.out.println(fizzBuzzes.collect(Collectors.joining(", ")));
     }
 
 }
