@@ -3,6 +3,7 @@ package dssc.assignment.fizzbuzz;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -28,9 +29,10 @@ public class ConvertNumbersToStrings {
         assertEquals(expected, fizzBuzz.converter(n));
     }
 
-    @Test
-    void number_7 () {
+    @ParameterizedTest
+    @ValueSource(ints = {7, 14, 28})
+    void numbers_divisible_by_7 (int n) {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("Bang", fizzBuzz.converter(7));
+        assertEquals("Bang", fizzBuzz.converter(n));
     }
 }
