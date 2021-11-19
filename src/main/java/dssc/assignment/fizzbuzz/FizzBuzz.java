@@ -10,7 +10,7 @@ public class FizzBuzz {
         
     }
 
-    static String converter (int i) {
+    public static String converter (int i) {
         if (i % 7 == 0) {
             if (i % 3 == 0) {
                 if (i % 5 == 0) {
